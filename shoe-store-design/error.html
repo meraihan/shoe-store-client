@@ -1,39 +1,86 @@
-<!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org./1999/xhtml">
-<head th:replace="common/header :: common-header" />
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      
+      <title>Shoepp</title>
+      <link rel="icon" href="image/icon-logo.png">  
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">  
+      <!-- Tables plugin -->
+      <link href="css/datatables.min.css" rel="stylesheet">  
+      <!-- Bootstrap tagsinput -->
+      <link href="css/tagsinput.css" rel="stylesheet">  
+      <!-- Simple pagination -->
+      <link href="css/simplePagination.css" rel="stylesheet" />  
+      <!-- Slick carousel -->  
+      <link href="css/slick.css" rel="stylesheet" />      
+      <link href="css/slick-theme.css" rel="stylesheet" />
+      <!-- Custom styles -->
+      <link href="css/style.css" rel="stylesheet">
+        <!-- Feather icons -->
+      <script src="https://unpkg.com/feather-icons"></script>  
+    </head>
 
 <body>
+    <div class="container">
+        <div class="text-center">
+          <h1>Something went wrong!</h1>
+          <a href="index.html" class="btn btn-primary btn-lg my-3">Go Home</a>
+        </div>
+        <table class="table">
+            <tr>
+                <td>Error</td>
+                <td>Not Found</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>404</td>
+            </tr>
+            <tr>
+                <td>Path</td>
+                <td>/spring-eshop</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Mon Mar 08 17:00:56 BDT 2021</td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td>No message available</td>
+            </tr>  
+        </table>
+    </div>
 
-<div class="container">
-<div class="text-center">
-  <h1>Something went wrong!</h1>
-  <a href="/" class="btn btn-primary btn-lg my-3">Go Home</a>
-</div>
-<table class="table">
-    <tr>
-        <td>Error</td>
-        <td th:text="${error}"/>
-    </tr>
-    <tr>
-        <td>Status</td>
-        <td th:text="${status}"/>
-    </tr>
-    <tr>
-        <td>Path</td>
-        <td th:text="${path}"/>
-    </tr>
-    <tr>
-        <td>Date</td>
-        <td th:text="${timestamp}"/>
-    </tr>
-    <tr>
-        <td>Message</td>
-        <td th:text="${message}"/>
-    </tr>  
-</table>
-</div>
-
-<div th:replace="common/header :: body-scripts"> </div>
-
+    <div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>
+          window.jQuery
+              || document
+                  .write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+        </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/datatables.min.js"></script>
+        <script src="js/tagsinput.js"></script>
+        <script>feather.replace()</script>
+        <script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script>
+            //prevent multiple form submission
+            $(function() {
+              $('form').submit(function(){
+                $("button[type='submit']", this)
+                  .text("Please Wait...")
+                  .attr('disabled', 'disabled');
+                return true;
+              });
+            });
+        </script>
+    </div>
 </body>
 </html>

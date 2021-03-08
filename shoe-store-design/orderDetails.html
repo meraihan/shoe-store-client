@@ -1,38 +1,95 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.w3.org./1999/xhtml">
-<head th:replace="common/header :: common-header" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Shoepp</title>
+  <link rel="icon" href="image/icon-logo.png">  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <!-- Tables plugin -->
+  <link href="css/datatables.min.css" rel="stylesheet">  
+  <!-- Bootstrap tagsinput -->
+  <link href="css/tagsinput.css" rel="stylesheet">  
+  <!-- Simple pagination -->
+  <link href="css/simplePagination.css" rel="stylesheet" />  
+  <!-- Slick carousel -->  
+  <link href="css/slick.css" rel="stylesheet" />      
+  <link href="css/slick-theme.css" rel="stylesheet" />      
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet">
+    <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>  
+  
+</head>
 
 
 <body class="d-flex flex-column">
-  <div th:replace="common/header :: navbar"> </div>
+  <div> 
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 fixed-top">
+      <a class="navbar-brand" href="#">ADMIN PORTAL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+              role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"> PRODUCTS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="addArticle.html">Add new product</a>
+              <a class="dropdown-item" href="articleList.html">View product list</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="store.html"> BACK TO STORE </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> LOG OUT </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+
   <div class="container page-content">  
     <div class="row">
       <div class="col-12 col-sm-6 col-lg-4 mb-2 text-center text-left-lg">
         <h5 class="font-weight-bold">Order details</h5>
         <div class="list-group list-group-flush list-group-no-border list-group-sm">
-          <div><strong>Date: </strong><span th:text="${#dates.format(order.orderDate, 'dd-MMM-yyyy')}"></span></div>
-          <div><strong>Delivery date: </strong><span th:text="${#dates.format(order.shippingDate, 'dd-MMM-yyyy')}"></span></div>
-          <div><strong>Current status: </strong><span th:text="${order.orderStatus}"></span></div>
+          <div><strong>Date: </strong><span>01-03-2021</span></div>
+          <div><strong>Delivery date: </strong><span>08-03-2021</span></div>
+          <div><strong>Current status: </strong><span>Processing</span></div>
         </div>        
         <hr class="d-block d-sm-none">
       </div>
       <div class="col-12 col-sm-6 col-lg-4 mb-2 text-center">
         <h5 class="font-weight-bold">Shipping</h5>
         <div class="list-group list-group-flush list-group-no-border list-group-sm">
-          <div><strong>Receiver: </strong><span th:text="${order.shipping.receiver}"></span></div>
-          <div><strong>Address: </strong><span th:text="${order.shipping.address.streetAddress}"></span></div>
-          <div><strong>City: </strong><span th:text="${order.shipping.address.city}"></span></div>
-          <div><strong>Country: </strong><span th:text="${order.shipping.address.country}"></span></div>
-          <div><strong>Zip Code: </strong><span th:text="${order.shipping.address.zipCode}"></span></div>
+          <div><strong>Receiver: </strong><span>Kamala Haris</span></div>
+          <div><strong>Address: </strong><span>South Dakota</span></div>
+          <div><strong>City: </strong><span>Test City</span></div>
+          <div><strong>Country: </strong><span>America</span></div>
+          <div><strong>Zip Code: </strong><span>01250</span></div>
         </div>
         <hr class="d-block d-sm-none">        
       </div>
       <div class="col-12 col-sm-6 col-lg-4 mb-2 text-center">
         <h5 class="font-weight-bold">Payment</h5>
         <div class="list-group list-group-flush list-group-no-border list-group-sm">
-          <div><strong>Credit card: </strong><span th:text="${order.payment.type}"></span></div>    
-          <div><strong>Card owner: </strong><span th:text="${order.payment.holderName}"></span></div>
-          <div><strong>Card number: </strong><span th:text="${order.payment.cardNumber}"></span></div>
+          <div><strong>Credit card: </strong><span>Visa Card</span></div>    
+          <div><strong>Card owner: </strong><span>Kamala Haris</span></div>
+          <div><strong>Card number: </strong><span>0125 5221 25521</span></div>
         </div>
       </div>
     </div>
@@ -40,27 +97,31 @@
     <h5 class="font-weight-bold text-center">Purchased products</h5>    
     <div class="row">
       <div class="card-body">
-        <div class="row align-items-center border-bottom py-2" th:each="cartItem : ${order.cartItems}">
-        
+        <div class="row align-items-center border-bottom py-2" each="#">
           <div class="col-12 col-md-6 mb-2">
             <div class="row align-items-center">
-        
               <div class="col-4">
-                <a th:href="@{/article-detail?id=}+${cartItem.article.id}"><img class="img-fluid" th:src="${cartItem.article.picture}" alt="${cartItem.article.title}"></a>
+                <a href="#"><img class="img-fluid" src="#" alt="#"></a>
               </div>
               <div class="col-8">
-                <a th:href="@{/article-detail?id=}+${cartItem.article.id}" class="h6 bold d-inline-block" th:text=${cartItem.article.title}></a>
+                <a href="#" class="h6 bold d-inline-block" text="#"></a>
                   <br>
-                  <div><small><b>Size</b>: <span th:text="${cartItem.size}"></span></small></div>                  
-                  <small><b>Unit Price</b>: $<span th:text="${#numbers.formatDecimal(cartItem.article.price, 0, 'COMMA', 2, 'POINT')}"></span></small>
+                  <div>
+                    <small>
+                      <b>Size</b>: <span></span>
+                    </small>
+                  </div>
+                  <small>
+                    <b>Unit Price</b>: $
+                    <span></span>
+                  </small>
               </div>
-              
             </div>
           </div>  
               
           <div class="col-12 col-md-6 text-right">
-            <span>x<span th:text="${cartItem.qty}"></span> units: </span>                           
-            <span class="font-weight-bold text-info">$ <span th:id="'price'+${cartItem.id}" th:text="${#numbers.formatDecimal(cartItem.subtotal, 0, 'COMMA', 2, 'POINT')}"></span></span>
+            <span> x <span></span> units: </span>                           
+            <span class="font-weight-bold text-info">$ <span id="#"></span></span>
           </div>  
               
             
@@ -69,14 +130,90 @@
        <div class="d-flex justify-content-center align-items-center mt-3">
          <div class="text-center">           
            <small class="counter">TOTAL</small>
-           <h3 class="font-weight-bold">$ <span th:text="${#numbers.formatDecimal(order.orderTotal, 0, 'COMMA', 2, 'POINT')}"></span></h3>
+           <h3 class="font-weight-bold">$ <span></span></h3>
           </div>         
        </div>
        </div>
     </div>   
   </div> <!--  end container -->
   
-  <div th:replace="common/header :: footer"> </div>
-  <div th:replace="common/header :: body-scripts"> </div>
+    <div>
+    <div class="footer mt-5">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 text-center pr-5">
+            <h5 class="font-weight-bold">SUBSCRIBE</h5>
+            <p>to our Newsletter to receive the latest news, sales and promos</p>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control rounded-pill text-center footer-input" placeholder="Enter your email">
+              </div>
+              <button type="button" class="btn btn-primary btn-block rounded-pill">SUBSCRIBE</button>
+            </form>
+          </div>          
+          <div class="col-6 col-lg-3 pl-3">
+            <h6 class="font-weight-bold">Customer Service</h6>
+            <div class="list-group list-group-flush list-group-no-border list-group-sm">
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Help Center</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">How to buy</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Delivery</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">How to return</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Payment Method</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Shipping Method</a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 pl-3">
+            <h6 class="font-weight-bold">Shoepp</h6>
+            <div class="list-group list-group-flush list-group-no-border list-group-sm">
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">About Us</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Terms and Conditions</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Privacy Policy</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">FAQs</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Our Story</a>
+              <a href="javascript:void(0)" class="list-group-item list-group-item-action">Services</a>
+            </div>
+          </div>  
+          <div class="col-sm-6 col-lg-3 pl-3">
+            <h6 class="font-weight-bold ">Contact us</h6>
+            <div class="list-group list-group-flush list-group-no-border list-group-sm">
+              <span class="list-group-item"><strong>Phone:</strong> 00 55 124 8000</span>
+              <span class="list-group-item"><strong>Email:</strong> contact@shoepp.com</span>              
+              <span class="list-group-item"><strong>Mon-Fri:</strong> 9.00 am - 8.00 pm</span>
+              <span class="list-group-item"><strong>Saturday:</strong> 10.00 am - 6.00 pm</span>
+              
+            </div>    
+          </div>        
+        </div>
+      </div>
+    </div>
+    <div class="copyright">Copyright &copy; 2019 Shoepp All rights reserved</div>  
+  </div>
+  
+<div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery
+          || document
+              .write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/tagsinput.js"></script>
+    <script>feather.replace()</script>
+    <script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+    //prevent multiple form submission
+    $(function() {
+      $('form').submit(function(){
+        $("button[type='submit']", this)
+          .text("Please Wait...")
+          .attr('disabled', 'disabled');
+        return true;
+      });
+    });
+    </script>
+  
+  </div>
 </body>
 </html>

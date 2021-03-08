@@ -1,9 +1,65 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org./1999/xhtml" xmlns:sec="http://www.w3.org./1999/xhtml">
-<head th:replace="common/header :: common-header" />
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Shoepp</title>
+  <link rel="icon" href="image/icon-logo.png">  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <!-- Tables plugin -->
+  <link href="css/datatables.min.css" rel="stylesheet">  
+  <!-- Bootstrap tagsinput -->
+  <link href="css/tagsinput.css" rel="stylesheet">  
+  <!-- Simple pagination -->
+  <link href="css/simplePagination.css" rel="stylesheet" />  
+  <!-- Slick carousel -->  
+  <link href="css/slick.css" rel="stylesheet" />      
+  <link href="css/slick-theme.css" rel="stylesheet" />      
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet">
+    <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>  
+  
+</head>
 <body>
 
-  <div th:replace="adminHome :: navbarAdmin"> </div>
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 fixed-top">
+      <a class="navbar-brand" href="#">ADMIN PORTAL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+              role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"> PRODUCTS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="addArticle.html">Add new product</a>
+              <a class="dropdown-item" href="articleList.html">View product list</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="store.html"> BACK TO STORE </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> LOG OUT </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <div class="container page-content">
     <table id="table-article" class="table table-striped table-bordered table-hover">
@@ -19,33 +75,46 @@
       </tr>
     </thead>
     <tbody>
-      <tr data-th-each="article : ${articles}">
-        <td th:text="${article.title}"></td>
-        <td><div style="display:flex;"><span th:each="item : ${article.categories}" 
-            th:text="${item.getName()}" class="badge badge-secondary mt-1 mr-1" ></span></div></td>
-        <td><div style="display:flex;"><span th:each="item : ${article.brands}" 
-            th:text="${item.getName()}" class="badge badge-secondary mt-1 mr-1" ></span></div></td>
-        <td><div style="display:flex;"><span th:each="item : ${article.sizes}" 
-            th:text="${item.getValue()}" class="badge badge-secondary mt-1 mr-1" ></span></div></td>
-        <td th:text="${article.price}"></td>
-        <td th:text="${article.stock}"></td>
-        <td><a th:href="@{/article/edit?id=}+${article.id}" class="badge badge-primary">EDIT</a>  
-            <a th:href="@{/article/delete?id=}+${article.id}" class="badge badge-danger">DELETE </a> </td>
-      </tr>
+      
     </tbody>
   </table>
   </div>
 
 
 
-  <div th:replace="common/header :: body-scripts"> </div>
+  <div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery
+          || document
+              .write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/tagsinput.js"></script>
+    <script>feather.replace()</script>
+    <script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+    //prevent multiple form submission
+    $(function() {
+      $('form').submit(function(){
+        $("button[type='submit']", this)
+          .text("Please Wait...")
+          .attr('disabled', 'disabled');
+        return true;
+      });
+    });
+    </script>
+  
+  </div>
   
   <script>
-  	$(document).ready(function() {
-	    $('#table-article').DataTable({
-	    	stateSave: true
-	    });
-	} );
+    $(document).ready(function() {
+      $('#table-article').DataTable({
+        stateSave: true
+      });
+  } );
   </script> 
 
 </body>
