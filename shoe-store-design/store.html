@@ -38,10 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto font-weight-bold">
           <li class="nav-item">
-            <a class="nav-link" href="#"> Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Store </a>
+            <a class="nav-link" href="store.html">Store</a>
           </li>
           <li class="nav-item">          
             <a class="nav-link" href="#">Shopping Cart 
@@ -50,7 +50,7 @@
         </ul>
         <ul class="navbar-nav ml-auto font-weight-bold">          
           <li class="nav-item">          
-            <a class="nav-link" href="#">My Account </a>
+            <a class="nav-link" href="myAccount.html">My Account </a>
           </li>
           <li class="nav-item">           
             
@@ -243,7 +243,7 @@
             </div>
             <div class="card">
               <div class="card-header px-5 py-2 text-center">
-                 <button type="submit" form="filter-form" class="btn btn-primary rounded-pill btn-block btn-sm">APPLY</button>              
+                 <button type="reset" form="filter-form" class="btn btn-primary rounded-pill btn-block btn-sm">APPLY</button>              
               </div>
             </div>
           </div>   <!-- end of accordion sidebar -->         
@@ -271,22 +271,16 @@
               
               <div class="btn-group ml-3">
                 <button type="button" class="btn btn-light btn-sm border rounded-pill" data-toggle="dropdown" 
-                        aria-haspopup="true" aria-expanded="false">                        
-                                      
-                    
-                    
-                    
-                    
+                        aria-haspopup="true" aria-expanded="false">  
                     <span id="dropdown-sort-text">Newest</span>
-                        
-                  <i data-feather="chevron-down"></i>
+                    <i data-feather="chevron-down"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right shadow-sm">
-                  <button class="dropdown-item button-sort" type="button" value="newest">Newest</button>
-                  <button class="dropdown-item button-sort" type="button" value="priceasc">Low - High Price</button>
-                  <button class="dropdown-item button-sort" type="button" value="pricedesc">High - Low Price</button>
-                  <button class="dropdown-item button-sort" type="button" value="alphasc">A - Z Order</button>
-                  <button class="dropdown-item button-sort" type="button" value="alphdesc">Z - A Order</button>
+                    <button class="dropdown-item button-sort" type="button" value="newest">Newest</button>
+                    <button class="dropdown-item button-sort" type="button" value="priceasc">Low - High Price</button>
+                    <button class="dropdown-item button-sort" type="button" value="pricedesc">High - Low Price</button>
+                    <button class="dropdown-item button-sort" type="button" value="alphasc">A - Z Order</button>
+                    <button class="dropdown-item button-sort" type="button" value="alphdesc">Z - A Order</button>
                 </div>
               </div> 
               <input id="input-sort" hidden="hidden" type="text" name="sort" value="">                           
@@ -298,8 +292,8 @@
           <div class="grid grid-gap-3 grid-col-2 grid-col-lg-3 mb-3">
               <div class="card card-product">
                 <div class="card-body">
-                  <a href="/article-detail?id=2032"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/690846-MLA30982504662_062019-C.jpg" alt="Card image cap"></a>
-                  <a href="/article-detail?id=2032" class="card-title">Zapatilla Fila F-euro Jogger</a>
+                  <a href="articleDetail.html"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/690846-MLA30982504662_062019-C.jpg" alt="Card image cap"></a>
+                  <a href="articleDetail.html" class="card-title">Zapatilla Fila F-euro Jogger</a>
                   <div class="price"><span class="h5">$2985</span></div>
                 </div>              
               </div>
@@ -498,7 +492,7 @@
     }) 
     
   $(function() {
-    /*
+    
     $('#light-pagination').pagination({
           items: $('#totalitems').val(),
           itemsOnPage: $('#itemsperpage').val(),
@@ -508,12 +502,12 @@
           prevText: "<",
           nextText: ">",
           displayedPages: 1,
-          edges: 1,
-          onPageClick: function(pageNumber) {
+          edges: 1/*,
+          onPageClick: function(pageNumber){
           $('#page').val(pageNumber)
-            $('#filter-form').submit()     
-          }
-      }); */
+            $('#filter-form').submit()
+          } */
+      });
   });
   </script>
 </body>
