@@ -26,7 +26,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -91,7 +92,16 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [              
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/datatables.min.js",
+              "src/assets/js/jquery.simplePagination.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/tagsinput-custom.js",
+              "src/assets/js/tagsinput.js",
+              "src/assets/js/test.js"
+            ]
           }
         },
         "lint": {
@@ -120,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "shoe-store-client"
+    }
+  },
+  "defaultProject": "shoe-store-client",
+  "cli": {
+    "analytics": "f1740376-8b36-4f98-b458-836881b86ffc"
+  }
 }
