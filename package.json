@@ -21,7 +21,9 @@
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
+    "jquery-slim-webpack": "0.0.3",
     "rxjs": "~6.4.0",
+    "slim-js": "^4.0.7",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

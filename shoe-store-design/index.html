@@ -9,7 +9,7 @@
   <title>Shoepp</title>
   <link rel="icon" href="image/icon-logo.png">  
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+  <link href="css/fonts.googleapis.css" rel="stylesheet">  
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">  
   <!-- Tables plugin -->
@@ -24,7 +24,7 @@
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet">
     <!-- Feather icons -->
-  <script src="https://unpkg.com/feather-icons"></script>  
+  <script src="js/feather.min.js"></script>  
   
 </head>
 
@@ -250,12 +250,14 @@
     <div class="copyright">Copyright &copy; 2019 Shoepp All rights reserved</div>  
   </div> 
   <div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--
+      <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    -->
     <script>
-      window.jQuery
-          || document
-              .write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+      // /docs/4.3/assets/js/vendor/jquery-slim.min.js
+      // window.jQuery || document.write('<script src="js/jquery-3.3.1.slim.min.js"><\/script>')
     </script>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/datatables.min.js"></script>
     <script src="js/tagsinput.js"></script>

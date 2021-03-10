@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-
+/*
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "./assets/css/datatables.min.css";
 @import "./assets/css/simplePagination.css";
 @import "./assets/css/slick-theme.css";
 @import "./assets/css/slick.css";
-/*@import "./assets/css/style.css"; */
+@import "./assets/css/style.css";
 @import "./assets/css/tagsinput.css";
+@import "./assets/css/fonts.googleapis.css"; 
+*/
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/css/style.css";
