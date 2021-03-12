@@ -1,0 +1,377 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Shoepp</title>
+</head>
+
+<body class="d-flex flex-column">
+  <app-menu></app-menu>
+   <form id="filter-form" action="/store" method="get">
+   <div class="container page-content">
+      <div class="row gutters-3">
+
+        <!-- Shop Filters -->
+        <div class="col-lg-3 col-md-4">
+          <div class="accordion accordion-caret accordion-sidebar d-none d-md-block">
+            <div class="card">
+              <div class="card-header">
+                <a href="#filter-categories" data-toggle="collapse" aria-expanded="true" aria-controls="filter-categories" role="button" class="h6">
+                  CATEGORIES
+                </a>
+              </div>
+              <div id="filter-categories" class="collapse show">
+                <div class="card-body">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Running" name="category" value="Running">
+                    <label class="custom-control-label" for="Running">Running</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Tenis" name="category" value="Tenis">
+                    <label class="custom-control-label" for="Tenis">Tenis</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Urban" name="category" value="Urban">
+                    <label class="custom-control-label" for="Urban">Urban</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Trekking" name="category" value="Trekking">
+                    <label class="custom-control-label" for="Trekking">Trekking</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Skate" name="category" value="Skate">
+                    <label class="custom-control-label" for="Skate">Skate</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Básquet" name="category" value="Básquet">
+                    <label class="custom-control-label" for="Básquet">Básquet</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a href="#filter-price" data-toggle="collapse" aria-expanded="true" aria-controls="filter-price" role="button" class="h6">
+                  PRICE
+                </a>
+              </div>
+              <div id="filter-price" class="collapse show">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <input type="text" class="form-control form-control-sm rounded-pill text-center font-weight-bold bg-light mr-2 minw-0"
+                           name="pricelow" value="">
+                    <input type="text" class="form-control form-control-sm rounded-pill text-center font-weight-bold bg-light ml-2 minw-0"
+                           name="pricehigh" value="">                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a href="#filter-size" data-toggle="collapse" aria-expanded="true" aria-controls="filter-size" role="button" class="h6">
+                  SIZE
+                </a>
+              </div>
+              <div id="filter-size" class="collapse show">
+                <div class="card-body">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="38" name="size" value="38">
+                      <label class="custom-control-label" for="38">38</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="39" name="size" value="39">
+                      <label class="custom-control-label" for="39">39</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="40" name="size" value="40">
+                      <label class="custom-control-label" for="40">40</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="41" name="size" value="41">
+                      <label class="custom-control-label" for="41">41</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="42" name="size" value="42">
+                      <label class="custom-control-label" for="42">42</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="43" name="size" value="43">
+                      <label class="custom-control-label" for="43">43</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="44" name="size" value="44">
+                      <label class="custom-control-label" for="44">44</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="45" name="size" value="45">
+                      <label class="custom-control-label" for="45">45</label>
+                    </div>
+                </div>
+              </div>
+            </div>            
+            <div class="card">
+              <div class="card-header">
+                <a href="#filter-brands" data-toggle="collapse" aria-expanded="true" aria-controls="filter-brands" role="button" class="h6">
+                  BRANDS
+                </a>
+              </div>
+              <div id="filter-brands" class="collapse show">
+                <div class="card-body">               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Adidas" name="brand" value="Adidas">
+                    <label class="custom-control-label" for="Adidas">Adidas</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Topper" name="brand" value="Topper">
+                    <label class="custom-control-label" for="Topper">Topper</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Puma" name="brand" value="Puma">
+                    <label class="custom-control-label" for="Puma">Puma</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="John Foos" name="brand" value="John Foos">
+                    <label class="custom-control-label" for="John Foos">John Foos</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Fila" name="brand" value="Fila">
+                    <label class="custom-control-label" for="Fila">Fila</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Zurich" name="brand" value="Zurich">
+                    <label class="custom-control-label" for="Zurich">Zurich</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Salomon" name="brand" value="Salomon">
+                    <label class="custom-control-label" for="Salomon">Salomon</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Caterpillar" name="brand" value="Caterpillar">
+                    <label class="custom-control-label" for="Caterpillar">Caterpillar</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Converse" name="brand" value="Converse">
+                    <label class="custom-control-label" for="Converse">Converse</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="New Balance" name="brand" value="New Balance">
+                    <label class="custom-control-label" for="New Balance">New Balance</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Le Coq Sportif" name="brand" value="Le Coq Sportif">
+                    <label class="custom-control-label" for="Le Coq Sportif">Le Coq Sportif</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Reebok" name="brand" value="Reebok">
+                    <label class="custom-control-label" for="Reebok">Reebok</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Olympikus" name="brand" value="Olympikus">
+                    <label class="custom-control-label" for="Olympikus">Olympikus</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Atomik" name="brand" value="Atomik">
+                    <label class="custom-control-label" for="Atomik">Atomik</label>
+                  </div>               
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="Asics" name="brand" value="Asics">
+                    <label class="custom-control-label" for="Asics">Asics</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header px-5 py-2 text-center">
+                 <button type="reset" form="filter-form" class="btn btn-primary rounded-pill btn-block btn-sm">APPLY</button>              
+              </div>
+            </div>
+          </div>   <!-- end of accordion sidebar -->         
+                         
+        </div>        
+        <!-- /Shop Filters -->
+
+        <div class="col-lg-9 col-md-8">                
+          <!-- /Shop Toolbar -->
+          <div class="card mb-3">
+            <div class="row card-body d-flex justify-content-between align-items-start py-2">
+            
+              <div class="col-8 col-md-7 col-lg-6">
+                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill d-block d-md-none mb-2" data-toggle="modal" data-target="#filterModal">
+                  <i data-feather="filter"></i> Filter</button>
+                <div class="input-group input-group-search input-group-sm mb-2">
+                  
+                  <input type="text" class="form-control border-0 bg-light input-search" placeholder="Search..." 
+                         name="search" value="">
+                  <div class="input-group-append">
+                    <button class="btn btn-light" type="submit"><i data-feather="search"></i></button>
+                  </div>
+                </div>                                
+              </div>    
+              
+              <div class="btn-group ml-3">
+                <button type="button" class="btn btn-light btn-sm border rounded-pill" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">  
+                    <span id="dropdown-sort-text">Newest</span>
+                    <i data-feather="chevron-down"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right shadow-sm">
+                    <button class="dropdown-item button-sort" type="button" value="newest">Newest</button>
+                    <button class="dropdown-item button-sort" type="button" value="priceasc">Low - High Price</button>
+                    <button class="dropdown-item button-sort" type="button" value="pricedesc">High - Low Price</button>
+                    <button class="dropdown-item button-sort" type="button" value="alphasc">A - Z Order</button>
+                    <button class="dropdown-item button-sort" type="button" value="alphdesc">Z - A Order</button>
+                </div>
+              </div> 
+              <input id="input-sort" hidden="hidden" type="text" name="sort" value="">                           
+            </div>
+          </div>
+          <!-- Shop toolbar -->
+          
+          <!-- Shop Grid -->          
+          <div class="grid grid-gap-3 grid-col-2 grid-col-lg-3 mb-3">
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="articleDetail.html"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/690846-MLA30982504662_062019-C.jpg" alt="Card image cap"></a>
+                  <a href="articleDetail.html" class="card-title">Zapatilla Fila F-euro Jogger</a>
+                  <div class="price"><span class="h5">$2985</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=2022"><img class="card-img-top" src="http://mla-s2-p.mlstatic.com/958758-MLA30978467825_062019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=2022" class="card-title">Zapatilla adidas Cosmic 2</a>
+                  <div class="price"><span class="h5">$2899</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=2012"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/916769-MLA30978472051_062019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=2012" class="card-title">Zapatilla adidas Cosmic 2</a>
+                  <div class="price"><span class="h5">$2699</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=2002"><img class="card-img-top" src="http://mla-s2-p.mlstatic.com/746181-MLA30978467255_062019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=2002" class="card-title">Zapatilla adidas Kanadia Trail</a>
+                  <div class="price"><span class="h5">$3499</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=1992"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/666026-MLA30852679955_052019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=1992" class="card-title">Zapatilla adidas Grand Court</a>
+                  <div class="price"><span class="h5">$2899</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=1982"><img class="card-img-top" src="http://mla-s2-p.mlstatic.com/736927-MLA30699167595_052019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=1982" class="card-title">Zapatilla adidas Altaspoprt Cf I</a>
+                  <div class="price"><span class="h5">$1899</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=1972"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/992458-MLA30888085488_052019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=1972" class="card-title">Zapatilla adidas Lite Racer K</a>
+                  <div class="price"><span class="h5">$2299</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=1962"><img class="card-img-top" src="http://mla-s2-p.mlstatic.com/665296-MLA29674319519_032019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=1962" class="card-title">Zapatilla John Foos 176 Fin All Canvas</a>
+                  <div class="price"><span class="h5">$2529</span></div>
+                </div>              
+              </div>
+              <div class="card card-product">
+                <div class="card-body">
+                  <a href="/article-detail?id=1952"><img class="card-img-top" src="http://mla-s1-p.mlstatic.com/680739-MLA29638040350_032019-C.jpg" alt="Card image cap"></a>
+                  <a href="/article-detail?id=1952" class="card-title">Zapatilla Puma Escaper Mesh Adp</a>
+                  <div class="price"><span class="h5">$2099</span></div>
+                </div>              
+              </div>
+          </div>      
+          <!-- /Shop Grid -->
+
+          <!-- Pagination -->
+          <div class="card" >
+            <div class="card-body d-flex justify-content-center">
+              <div id="light-pagination"></div>
+            </div>
+          </div>
+          <!-- /Pagination -->
+
+        </div>
+      </div>
+    </div> <!-- end container -->    
+
+    <!-- Filter Modal -->
+    <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title">Shop Filters</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Filter Modal -->
+    <input id="page" hidden="hidden" type="text" name="page" value="">     
+    <input id="totalitems" hidden="hidden" type="text" value="200">
+    <input id="itemsperpage" hidden="hidden" type="text" value="9">   
+
+    </form>
+  
+<!--footer -->
+  <app-footer></app-footer>
+  <script>    
+    var sidebarContent = $('.accordion-sidebar').html()
+    $('#filterModal').on('show.bs.modal', function () {
+      // move filter contents to modal body
+      $(this).find('.modal-body').html('<div class="accordion accordion-caret accordion-sidebar accordion-modal">'+sidebarContent+'</div>')
+      // empty the sidebar filter contents
+      $('.accordion-sidebar:not(.accordion-modal)').html('')
+    }) 
+    $('#filterModal').on('hidden.bs.modal', function () {
+      $('.accordion-modal').remove() // remove modal filter contents
+      $('.accordion-sidebar').html(sidebarContent) // move filter contents back to the sidebar
+    })    
+    $('.button-sort').click(function () {
+      var value = $(this).val()
+      var text = $(this).text()      
+      $('#input-sort').val(value)
+      $('#dropdown-sort-text').text(text)      
+      $('#filter-form').submit()     
+    }) 
+    
+  $(function() {
+    
+    $('#light-pagination').pagination({
+          items: $('#totalitems').val(),
+          itemsOnPage: $('#itemsperpage').val(),
+          currentPage: $('#page').val(),
+          cssStyle: 'light-theme',
+          useAnchors: false,
+          prevText: "<",
+          nextText: ">",
+          displayedPages: 1,
+          edges: 1/*,
+          onPageClick: function(pageNumber){
+          $('#page').val(pageNumber)
+            $('#filter-form').submit()
+          } */
+      });
+  });
+  </script>
+</body>
+</html>
