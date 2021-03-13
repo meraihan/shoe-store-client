@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
+
 export class MenuComponent implements OnInit {
 
   constructor(private router: Router) { }
@@ -14,8 +16,20 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-
   gotoStore(){
     this.router.navigate(['Store']);
   }
+
+  
+  gotoShoppingCart(){
+    this.router.navigate(['ShoppingCart']);
+  }
+
+
+  gotoMyAccount(){
+    this.router.navigate(['MyAccount']);
+  }
+
+
+
 }

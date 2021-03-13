@@ -1,1 +1,100 @@
-<p>shopping-cart works!</p>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Shoepp</title>
+  <link rel="icon" href="../../../assets/image/icon-logo.png">
+</head>
+
+
+<body class="d-flex flex-column">
+<app-menu></app-menu>
+  <div class="container page-content">       
+    <form action="/shopping-cart/update-item" method="post">   
+    <input hidden="hidden" id="newqty" name="qty">    
+    <input hidden="hidden" id="newid" name="id">     
+    <div class="card">
+      <div class="card-body">
+         <div class="row border-bottom  pb-2 pt-2">        
+           <div class="col-12 col-md-6">
+              <div class="row align-items-center">              
+                <div class="col-4">
+                  <a href="#"><img class="img-fluid" src="http://mla-s1-p.mlstatic.com/666026-MLA30852679955_052019-C.jpg" alt="${cartItem.article.title}"></a>
+                </div>
+                <div class="col-8">
+                  <a href="#" class="h6 bold d-inline-block">Zapatilla adidas Grand Court</a>
+                  <div><i data-feather="check-circle" class="text-success"></i> In Stock</div>                  
+                  <div><small><b>Size</b>: <span>44</span></small></div>                  
+                  <small><b>Unit Price</b>: $<span>2,899.00</span></small>
+                </div>                
+              </div>  
+           </div>                 
+           <div class="col-12 col-md-6">
+              <div class="row align-items-center mt-3">           
+                <div class="col-5">
+                  <div class="row ">
+                    <label for="979" class="col-sm-6 col-form-label text-sm-right">Qty</label>
+                    <div class="col-sm-6">
+                      <input id="979" type="number" min="0" max="${cartItem.article.stock}"
+                         class="form-control cartItemQty" value="1">
+                      <button style="display: none;"
+                          id="update-item-979" type="submit"
+                          class="btn btn-warning btn-xs">Update</button>                                     
+                    </div>
+                  </div>            
+                </div>
+                <div class="col-5 text-right">
+                  <span class="font-weight-bold">$ <span id="price979">2,899.00</span></span>
+                </div>
+                <div class="col-2 ">
+                  <a href="#"><i class="mb-1" data-feather="trash-2"></i></a>                              
+                </div>
+             </div>   
+           </div> 
+         </div>
+         <div class="text-center mt-3">
+            <small class="counter">TOTAL</small>
+            <h3 class="font-weight-bold">$ <span>2,899.00</span></h3>
+            <a href="/store" class="btn btn-info rounded-pill "><i data-feather="arrow-left"></i> Back to shop</a>            
+            <a href="/checkout" class="btn btn-primary rounded-pill">Checkout <i data-feather="arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    </form> 
+  </div> 
+  
+  <app-footer></app-footer>
+  <div>    
+
+    <script>
+    //prevent multiple form submission
+    $(function() {
+      $('form').submit(function(){
+        $("button[type='submit']", this)
+          .text("Please Wait...")
+          .attr('disabled', 'disabled');
+        return true;
+      });
+    });
+    </script>
+  
+  </div>
+  <script>
+    $(document).ready(function(){
+  		$(".cartItemQty").on('change', function(){
+  			var id=this.id;	
+  			var qty=this.value;
+  			$('#newqty').val(qty)
+  			$('#newid').val(id)
+  			$('#update-item-'+id).css('display', 'inline-block');
+  		});
+    });
+  </script>
+  
+</body>
+</html>
