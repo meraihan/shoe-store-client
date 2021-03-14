@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css']
 })
+
 export class StoreComponent implements OnInit {
 
   constructor(private router: Router) { }

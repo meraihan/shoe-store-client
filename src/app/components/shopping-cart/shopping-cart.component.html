@@ -8,7 +8,8 @@
   <meta name="description" content="">
   
   <title>Shoepp</title>
-  <link rel="icon" href="../../../assets/image/icon-logo.png">
+  <link rel="icon" href="../../../assets/image/icon-logo.png" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet" /> 
 </head>
 
 
@@ -28,11 +29,11 @@
                 </div>
                 <div class="col-8">
                   <a href="#" class="h6 bold d-inline-block">Zapatilla adidas Grand Court</a>
-                  <div><i data-feather="check-circle" class="text-success"></i> In Stock</div>                  
-                  <div><small><b>Size</b>: <span>44</span></small></div>                  
+                  <div><i data-feather="check-circle" class="text-success"></i> In Stock</div>                
+                  <div><small><b>Size</b>: <span>44</span></small></div>
                   <small><b>Unit Price</b>: $<span>2,899.00</span></small>
-                </div>                
-              </div>  
+                </div>        
+              </div>
            </div>                 
            <div class="col-12 col-md-6">
               <div class="row align-items-center mt-3">           
@@ -70,17 +71,18 @@
   
   <app-footer></app-footer>
   <div>    
-
+    <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
     <script>
-    //prevent multiple form submission
-    $(function() {
-      $('form').submit(function(){
-        $("button[type='submit']", this)
-          .text("Please Wait...")
-          .attr('disabled', 'disabled');
-        return true;
+      //prevent multiple form submission
+      $(function(){
+        $('form').submit(function(){
+          $("button[type='submit']", this)
+            .text("Please Wait...")
+            .attr('disabled', 'disabled');
+          return true;
+        });
       });
-    });
     </script>
   
   </div>

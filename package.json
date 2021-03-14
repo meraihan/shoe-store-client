@@ -22,7 +22,7 @@
     "@types/jquery": "^3.5.5",
     "bootstrap": "^4.6.0",
     "feather-icons": "^4.28.0",
-    "jquery": "^3.6.0",
+    "jquery": "^3.5.1",
     "jquery-slim-webpack": "0.0.3",
     "rxjs": "~6.4.0",
     "slim-js": "^4.0.7",

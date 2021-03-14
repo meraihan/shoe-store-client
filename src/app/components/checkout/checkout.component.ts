@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as Feather from 'feather-icons';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-checkout',
@@ -14,6 +13,9 @@ export class CheckoutComponent implements OnInit {
   ngOnInit() {
     Feather.replace();
     $('#elemId').width();
+    $(function(){
+      
+    });
   }
 
 }
