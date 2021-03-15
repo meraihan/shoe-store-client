@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as Feather from 'feather-icons';
 
 @Component({
@@ -8,14 +9,19 @@ import * as Feather from 'feather-icons';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     Feather.replace();
     $('#elemId').width();
-    $(function(){
-      
-    });
+  }
+
+  gotoPlaceOrder(){
+    this.router.navigate(['OrderSubmitted']);
+  }
+
+  onSubmit(): void {
+    this.router.navigate(['OrderSubmitted']);
   }
 
 }

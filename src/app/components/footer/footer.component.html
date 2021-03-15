@@ -51,29 +51,30 @@
   </div> 
   <div>
     <!--
-    <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/datatables.min.js"></script>
-    <script src="../../../assets/js/tagsinput.js"></script>
-    <script type="text/javascript" src="../../../assets/js/jquery.simplePagination.js"></script>
-    <script type="text/javascript" src="../../../assets/js/slick.min.js"></script>-->
+      <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
+      <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+      <script src="../../../assets/js/datatables.min.js"></script>
+      <script src="../../../assets/js/tagsinput.js"></script>
+      <script type="text/javascript" src="../../../assets/js/jquery.simplePagination.js"></script>
+      <script type="text/javascript" src="../../../assets/js/slick.min.js"></script>
+    -->
     <script>
-    //prevent multiple form submission
-    $(function() {
-      $('form').submit(function(){
-        $("button[type='submit']", this)
-          .text("Please Wait...")
-          .attr('disabled', 'disabled');
-        return true;
-      });
-    });
+        //prevent multiple form submission
+        $(function(){
+          $('form').submit(function(){
+            $("button[type='submit']", this)
+              .text("Please Wait...")
+              .attr('disabled', 'disabled');
+            return true;
+          });
+        });
     </script>
   
   </div>
   
   <script type="text/javascript">
+      
     $(document).ready(function(){
-      alert();
       $('.featured-items').slick({
         infinite: true,
         slidesToShow: 4,

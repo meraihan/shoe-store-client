@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['Store']);
   }
 
+
   
   gotoShoppingCart(){
     this.router.navigate(['ShoppingCart']);

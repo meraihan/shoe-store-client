@@ -16,7 +16,7 @@
 <body class="d-flex flex-column">
     <app-menu></app-menu>
         <div class="container page-content">   
-            <form action="/checkout" method="post">
+            <form>
                 <div class="row">    
                     <!-- Checkout Info -->                         
                     <div class="col-lg-8 mb-3" >                        
@@ -225,9 +225,9 @@
                         </div>
                         </div>
                         <div class="card-footer bg-white border-top-0">
-                        <button type="submit" class="btn btn-primary rounded-pill btn-lg btn-block mt-2 mb-3">
+                        <button (click)="onSubmit()" class="btn btn-primary rounded-pill btn-lg btn-block mt-2 mb-3">
                         Place your order
-                        </button>            
+                        </button>
                         <p style="font-size: smaller;">
                             By placing your order, you agree to Shoepp <a href="#">privacy</a>
                             notice and <a href="#">conditions</a>.</p>                   
@@ -236,6 +236,9 @@
                     </div>        
                 </div>
             </form>    
+            <button class="btn btn-primary rounded-pill btn-lg btn-block mt-2 mb-3">
+                Place your order
+            </button>
         </div> <!--  end container -->   
     <app-footer></app-footer>
 </body>
