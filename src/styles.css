@@ -13,12 +13,13 @@
 */
 
 
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "./assets/css/stylesmain.css";
 @import "./assets/css/tagsinput.css";
 @import "./assets/css/fonts.googleapis.css";
 @import "./assets/css/datatables.min.css";
 @import "./assets/css/simplePagination.css";
-@import "../node_modules/slick-carousel/slick/slick-theme.css";
+@import "./assets/css/slick-theme.css";
+@import "./assets/css/flickity.min.css";
 @import "../node_modules/slick-carousel/slick/slick.css";
 
