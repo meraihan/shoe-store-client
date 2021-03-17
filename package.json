@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@types/jquery": "^3.5.5",
+    "angular-responsive-carousel": "^2.0.2",
     "bootstrap": "^4.6.0",
     "feather-icons": "^4.28.0",
     "jquery": "^3.5.1",
