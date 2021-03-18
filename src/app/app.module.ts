@@ -14,6 +14,7 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { ArticleDetailsComponent } from './components/article-details/article-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderSubmittedComponent } from './components/order-submitted/order-submitted.component';
+import { MyAddressComponent } from './components/my-address/my-address.component';
 
 
 
@@ -29,7 +30,8 @@ import { OrderSubmittedComponent } from './components/order-submitted/order-subm
     MyProfileComponent,
     ArticleDetailsComponent,
     CheckoutComponent,
-    OrderSubmittedComponent
+    OrderSubmittedComponent,
+    MyAddressComponent
   ],
   imports: [
     BrowserModule,

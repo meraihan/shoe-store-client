@@ -2,23 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-my-profile',
-  templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.css']
+  selector: 'app-my-address',
+  templateUrl: './my-address.component.html',
+  styleUrls: ['./my-address.component.css']
 })
-export class MyProfileComponent implements OnInit {
+export class MyAddressComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-
   gotoAddress(){
     this.router.navigate(['MyAddress']);
+  }
+
+  gotoProfile(){
+    this.router.navigate(['MyProfile']);
   }
 
   gotoLogin(){
     this.router.navigate(['MyAccount']);
   }
+
 }
