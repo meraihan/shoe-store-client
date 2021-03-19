@@ -12,9 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
     <!-- Bootstrap core CSS -->
     <!-- Feather icons -->
+
     <script src="https://unpkg.com/feather-icons"></script>  
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
-    
+    <script>
+    </script>
   </head>
 
 
@@ -23,7 +25,7 @@
   <app-menu></app-menu>
   <div class="jumbotron jumbotron-fluid mt-0" style="background-image: url(../../../assets/image/background/adidas-background.jpg);">
     <div class="container">
-      <div class="row text-left py-5">   
+      <div class="row text-left py-5"> 
          <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-3 col-xl-6 offset-xl-6 my-auto">  
             <h2 class="bg-warning text-dark d-inline-block p-1">Brand New</h2>
             <h1 class="font-weight-bold">High Quality Shoes</h1>
@@ -39,7 +41,8 @@
 <section class="section py-5 ">
   <div class="container text-center">
     <h4 class="font-weight-bold ">Featured products</h4>
-    <div class="carousel js-flickity">
+    <div class="main-gallery js-flickity"
+    data-flickity-options='{ "cellAlign": "left", "contain": true }'>
         <div class="carousel-cell col-lg-3 card card-product card-featured" style="width: 262px; height: 362px;">
           <div class="card-body">
             <a href="#"><img class="card-img-top" src="http://mla-s2-p.mlstatic.com/705285-MLA28158537898_092018-C.jpg" alt="Card image cap"></a>
@@ -128,11 +131,12 @@
       </div>
     </div> <!-- end container -->
   </section> <!-- end section -->
-  
+
   <section class="section py-5">
     <div class="container text-center">
       <h4 class="font-weight-bold">Popular brands</h4>  
       <div class="row">
+        
         <div class="col-lg-2">
           <img  class="img-fluid py-5 px-5" src="../../../assets/image/brands/01.png" />
         </div>
@@ -155,8 +159,5 @@
     </div>  
   </section>
   <app-footer></app-footer>
-  <script>
-    
-  </script>
 </body>
 </html>
