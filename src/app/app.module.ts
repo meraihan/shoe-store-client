@@ -15,6 +15,10 @@ import { ArticleDetailsComponent } from './components/article-details/article-de
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderSubmittedComponent } from './components/order-submitted/order-submitted.component';
 import { MyAddressComponent } from './components/my-address/my-address.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { AddArticleComponent } from './components/add-article/add-article.component';
+import { ArticleListComponent } from './components/article-list/article-list.component';
 
 
 
@@ -31,7 +35,11 @@ import { MyAddressComponent } from './components/my-address/my-address.component
     ArticleDetailsComponent,
     CheckoutComponent,
     OrderSubmittedComponent,
-    MyAddressComponent
+    MyAddressComponent,
+    MyOrdersComponent,
+    AdminHomeComponent,
+    AddArticleComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,

@@ -27,10 +27,12 @@
                 <a href="javascript:void(0)" (click)="gotoProfile()" class="list-group-item list-group-item-action active">
                     <i data-feather="user" class="mr-3"></i>Profile
                 </a>
-                <a href="myOrders.html" class="list-group-item list-group-item-action">
+                <a href="javascript:void(0)" (click)="gotoMyOrders()" class="list-group-item list-group-item-action">
                   <i data-feather="shopping-bag" class="mr-3"></i> Orders
                 </a>
-                <a href="#" class="list-group-item list-group-item-action"><i data-feather="map" class="mr-3"></i> Address</a>
+                <a href="javascript:void(0)" (click)="gotoAddress()" class="list-group-item list-group-item-action">
+                  <i data-feather="map" class="mr-3"></i> Address
+                </a>
                 <a href="javascript:void(0)" (click)="gotoLogin()" class="list-group-item list-group-item-action text-danger"><i data-feather="log-out" class="mr-3"></i> Logout</a>
               </div>
             </div>
@@ -61,7 +63,7 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <button type="submit" class="btn btn-primary">UPDATE ADDRESS</button>
+                      <button type="button" href="javascript:void(0)" class="btn btn-primary">UPDATE ADDRESS</button>
                     </div>
                   </form>             
                 </div>

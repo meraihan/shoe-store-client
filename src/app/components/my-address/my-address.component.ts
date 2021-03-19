@@ -25,4 +25,8 @@ export class MyAddressComponent implements OnInit {
     this.router.navigate(['MyAccount']);
   }
 
+
+  gotoMyOrders(){
+    this.router.navigate(['MyOrders']);
+  }
 }

@@ -31,6 +31,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['MyAccount']);
   }
 
-
+  gotoAdmin(){
+    this.router.navigate(['AdminHome']);
+  }
 
 }
