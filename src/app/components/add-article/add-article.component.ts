@@ -12,23 +12,26 @@ export class AddArticleComponent implements OnInit{
 
   form: any = {};
   errorMessage='';
-  constructor(private router: Router, private catalogService: CatalogService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(){
-    this.form = {
-      "id": 30,
-      "title": "Product name",
-      "description": "prodotto desc",
-      "picture": "../../assets/image/05.png",
-      "price": "100",
-      "stock": "30",
-      "sizes": "30, 31, 32",
-      "brands": "Nike, Puma",
-      "categories": "Man, Sport"
-    };
+
   }
 
-
+  /*
+  this.form = {
+    "id": 30,
+    "title": "Product name",
+    "description": "prodotto desc",
+    "picture": "../../assets/image/05.png",
+    "price": "100",
+    "stock": "30",
+    "sizes": "30, 31, 32",
+    "brands": "Nike, Puma",
+    "categories": "Man, Sport"
+  }; */
+  
+  /*
   onSubmit(){
     this.catalogService.addProduct(this.form).subscribe(
       data =>{
@@ -40,6 +43,7 @@ export class AddArticleComponent implements OnInit{
       }
     );
   }
+*/
 
   gotoAddArticle(){
     this.router.navigate(['AddArticle']);
@@ -51,6 +55,7 @@ export class AddArticleComponent implements OnInit{
 
 
   editProduct(){
+    /*
     this.catalogService.editProduct(this.form).subscribe(
       data =>{
         this.router.navigate(['ArticleList'])
@@ -61,7 +66,16 @@ export class AddArticleComponent implements OnInit{
       err =>{
         this.errorMessage = err.error.message;
       }
-    );
+    ); */
+  }
+
+  gotoStore(){
+    this.router.navigate(['Store']);
+  }
+
+
+  gotoHome(){
+    this.router.navigate(['']);
   }
 
   reloadData(){

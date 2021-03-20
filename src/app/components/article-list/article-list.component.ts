@@ -25,4 +25,13 @@ export class ArticleListComponent implements OnInit{
     this.router.navigate(['ArticleList']);
   }
 
+  gotoStore(){
+    this.router.navigate(['Store']);
+  }
+
+
+  gotoHome(){
+    this.router.navigate(['']);
+  }
+
 }

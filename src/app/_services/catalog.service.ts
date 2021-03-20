@@ -34,20 +34,21 @@ export class CatalogService{
     }, httpOptions);
   }
 
+  /*
 
   editProduct(msgData): Observable<any>{
     return this.http.put(AUTH_API + 'edit',{
-      id: msgData.id,
-      title: msgData.title,
-      description: msgData.description,
-      picture: msgData.picture,
-      price: msgData.price,
-      stock: msgData.stock,
-      sizes: msgData.sizes,
-      brands: msgData.brands,
-      categories: msgData.categories
+      "id": 30,
+      "title": "Product name",
+      "description": "prodotto desc",
+      "picture": "../../assets/image/05.png",
+      "price": "100",
+      "stock": "30",
+      "sizes": "30, 31, 32",
+      "brands": "Nike, Puma",
+      "categories": "Man, Sport"
     }, httpOptions);
-  }
+  } */
 
 
 

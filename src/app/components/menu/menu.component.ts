@@ -35,4 +35,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['AdminHome']);
   }
 
+  gotoHome(){
+    this.router.navigate(['']);
+  }
+
 }

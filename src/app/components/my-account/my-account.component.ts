@@ -19,7 +19,7 @@ export class MyAccountComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
 
-  constructor(private authService: AuthServiceService, private router: Router, private tokenStorage: TokenStorageService) { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
     this.form = {
@@ -29,7 +29,7 @@ export class MyAccountComponent implements OnInit {
       "password": "123"
     };
   }
-
+/*
   signUp(){
     this.authService.register(this.form).subscribe(
       res => this.router.navigate(['']),
@@ -56,7 +56,7 @@ export class MyAccountComponent implements OnInit {
       }
     );
   }
-
+*/
 
   gotoProfile(){
     this.router.navigate(['MyProfile']);
