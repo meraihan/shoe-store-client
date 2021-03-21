@@ -1,0 +1,12 @@
+[
+    {
+		"title": "Product name",
+		"description": "prodotto desc",
+		"picture": "http://example.png",
+		"price": "100",
+		"stock": "30",
+		"sizes": "30, 31, 32",
+		"brands": "Nike, Puma",
+		"categories": "Man, Sport"
+	}
+]
