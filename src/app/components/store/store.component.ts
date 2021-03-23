@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Product } from './Product';
 import * as productDetails from '../../../assets/json/productDetails.json';
 import { Observable } from "rxjs";
-
+import {CatalogService } from '../../_services/catalog.service';
 
 @Component({
   selector: 'app-store',
@@ -14,18 +14,14 @@ import { Observable } from "rxjs";
 export class StoreComponent implements OnInit{
 
   constructor(private router: Router) { }
-   products: Product[];
-  // products: any = (productDetails as any).default;
+   // products: string[];
 
   ngOnInit(){
-    console.log(productDetails);
-    
     this.reloadData();
   }
 
+
   reloadData(){
-     this.products = (productDetails as any).default;
-    // products: Product[] = productDetails;
   }
 
   articleDetail(){

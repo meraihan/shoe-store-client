@@ -13,6 +13,7 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
+import { StudentComponent } from './components/student/student.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'MyOrders', component: MyOrdersComponent},
   { path: 'AdminHome', component: AdminHomeComponent},
   { path: 'AddArticle', component: AddArticleComponent},
-  { path: 'ArticleList', component: ArticleListComponent}
+  { path: 'ArticleList', component: ArticleListComponent},
+  { path: 'Student', component: StudentComponent}
 ];
 
 @NgModule({

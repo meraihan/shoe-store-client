@@ -3,6 +3,8 @@ import { AuthServiceService } from '../../_services/auth-service.service';
 import {Router} from '@angular/router';
 import {TokenStorageService } from '../../_services/token-storage.service';
 
+// https://technicaaadda.blogspot.com/2020/04/code-for-social-login.html
+
 @Component({
   selector: 'app-my-account',
   templateUrl: './my-account.component.html',

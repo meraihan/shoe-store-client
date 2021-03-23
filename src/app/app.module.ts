@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -19,7 +18,7 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
-
+import { StudentComponent } from './components/student/student.component';
 
 
 @NgModule({
@@ -39,14 +38,17 @@ import { ArticleListComponent } from './components/article-list/article-list.com
     MyOrdersComponent,
     AdminHomeComponent,
     AddArticleComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     SlickCarouselModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

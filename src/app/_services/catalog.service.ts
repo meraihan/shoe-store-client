@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject} from 'rxjs';
+
 
 const AUTH_API = 'http://localhost:8080/catalog-service/product/'; // add
 
@@ -33,6 +34,11 @@ export class CatalogService{
       categories: msgData.categories
     }, httpOptions);
   }
+
+
+
+ 
+
 
   /*
 
