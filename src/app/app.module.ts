@@ -18,6 +18,24 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login";
+
+
+
+
+// Configs 
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider("692072137787-7k2labjkfj2uvbt47k4ootvj3iil6n61.apps.googleusercontent.com")
+        }
+      ]
+  );
+  return config;
+}
+
 
 
 
@@ -43,10 +61,14 @@ import { ArticleListComponent } from './components/article-list/article-list.com
   imports: [
     BrowserModule,
     SlickCarouselModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocialLoginModule
   ],
   providers: [
-
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
   ],
   bootstrap: [AppComponent]
 })

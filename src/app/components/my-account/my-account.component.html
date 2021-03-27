@@ -21,6 +21,7 @@
               <!-- Login Form -->
                 <div class="col-md-6 col-login">
                     <form action="/login" method="post" >
+                        <span>{{guser.email}}</span>
                         <div class="form-group text-center mb-2">
                             <h2 class="mb-0">Log In</h2>
                             <em>to your account</em>
@@ -52,7 +53,7 @@
                             class="btn btn-primary btn-block">LOGIN</button>
                         <br>                        
                     </form>
-                    <button class="login-Btn btn-block" #loginRef style="float: right;">
+                    <button class="login-Btn btn-block" #loginRef style="float: right;" (click)="socialSignIn('google')">
                       Login with Google<img class="social-btn-icon" alt="Login with Google" src="https://hrcdn.net/fcore/assets/google-colored-20b8216731.svg">
                     </button>
                     <br>

@@ -3,6 +3,9 @@ import { AuthServiceService } from '../../_services/auth-service.service';
 import {Router} from '@angular/router';
 import {TokenStorageService } from '../../_services/token-storage.service';
 import { ViewChild,ElementRef } from '@angular/core'
+import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular-6-social-login';
+import { Socialusers } from './socilaUsers';
+import { Observable } from "rxjs";
 
 // https://technicaaadda.blogspot.com/2020/04/code-for-social-login.html
 // https://www.youtube.com/watch?v=S4rzmjuZWzI
@@ -20,6 +23,7 @@ export class MyAccountComponent implements OnInit {
 
   @ViewChild('loginRef', {static: true }) loginElement: ElementRef;
   
+  guser: Socialusers;
   auth2:any;
   form: any = {};
   isSuccessful = false;
@@ -28,14 +32,39 @@ export class MyAccountComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private socialAuthService: AuthService) { }
+
+  
 
   ngOnInit(){
-    this.googleInitialize();
+    // this.googleInitialize();
   }
 
 
-  googleInitialize() {
+  public socialSignIn(socialPlatform : string){
+    let socialPlatformProvider;
+    if(socialPlatform == "google"){
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    }
+    
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData)=>{
+        console.log(socialPlatform+" sign in data : " , userData);
+        // Now sign-in with userData
+        // ...            
+      }
+    );
+
+    this.socialAuthService.signIn(socialPlatformProvider).then(socialusers => {  
+      //console.log(socialPlatform, socialusers);  
+      this.guser = socialusers;
+      console.log(socialusers);  
+    });
+  }
+
+
+
+  googleInitialize(){
     window['googleSDKLoaded'] = () =>{
       window['gapi'].load('auth2', () =>{
         this.auth2 = window['gapi'].auth2.init({
@@ -55,16 +84,18 @@ export class MyAccountComponent implements OnInit {
     }(document, 'script', 'google-jssdk'));
   }
 
-  prepareLogin() {
+
+
+  prepareLogin(){
     this.auth2.attachClickHandler(this.loginElement.nativeElement, {},
-      (googleUser) => {
-        let profile = googleUser.getBasicProfile();
-        console.log('Token || ' + googleUser.getAuthResponse().id_token);
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
-      }, (error) => {
-        alert(JSON.stringify(error, undefined, 2));
-      });
+    (googleUser) => {
+      let profile = googleUser.getBasicProfile();
+      console.log('Token || ' + googleUser.getAuthResponse().id_token);
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail());
+    }, (error) => {
+      alert(JSON.stringify(error, undefined, 2));
+    });
   }
 
   gotoAdmin(){
@@ -75,7 +106,7 @@ export class MyAccountComponent implements OnInit {
     this.router.navigate(['MyProfile']);
   }
 
-  reloadPage() {
+  reloadPage(){
     window.location.reload();
   }
 }
