@@ -18,7 +18,7 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
-import { StudentComponent } from './components/student/student.component';
+
 
 
 @NgModule({
@@ -38,8 +38,7 @@ import { StudentComponent } from './components/student/student.component';
     MyOrdersComponent,
     AdminHomeComponent,
     AddArticleComponent,
-    ArticleListComponent,
-    StudentComponent
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,

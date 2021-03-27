@@ -66,35 +66,11 @@ export class MyAccountComponent implements OnInit {
         alert(JSON.stringify(error, undefined, 2));
       });
   }
-/*
-  signUp(){
-    this.authService.register(this.form).subscribe(
-      res => this.router.navigate(['']),
-      err => console.log(console.log(err.error.message), alert(''+err.error.message))
-    );   
+
+  gotoAdmin(){
+    this.router.navigate(['AdminHome']);
   }
-
-
-  onSubmit(){
-    this.authService.login(this.form).subscribe(
-      data => {
-        this.tokenStorage.saveToken(data.accessToken);
-        this.tokenStorage.saveUser(data);
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
-        sessionStorage.setItem('loggedUser', data.username);
-        this.router.navigate(['adminHome']);        
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isLoginFailed = true;        
-      }
-    );
-  }
-*/
-
+  
   gotoProfile(){
     this.router.navigate(['MyProfile']);
   }

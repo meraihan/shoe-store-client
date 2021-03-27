@@ -234,7 +234,7 @@
           <!-- Shop toolbar -->
           
           <!-- Shop Grid -->          
-          <!--
+          
           <div class="grid grid-gap-3 grid-col-2 grid-col-lg-3 mb-3">
               <div class="card card-product">
                 <div class="card-body">
@@ -310,13 +310,15 @@
                   <div class="price"><span class="h5">$2099</span></div>
                 </div>              
               </div>
-          </div> -->     
+          </div>   
           <!-- /Shop Grid -->
+
+        <!--
           <div class="grid grid-gap-3 grid-col-2 grid-col-lg-3 mb-3" *ngFor="let i of products | async">
               <div class="card card-product">
                   <div class="card-body">
                       <a href="javascript:void(0)" (click)="articleDetail()">
-                          <!-- <img class="card-img-top" src="{{i.picture}}" alt="Card image cap"> -->
+                           <img class="card-img-top" src="{{i.picture}}" alt="Card image cap"> 
                       </a>
                       <a href="javascript:void(0)" (click)="articleDetail()" class="card-title">
                         {{i.title}}
@@ -326,7 +328,9 @@
                       </div>
                   </div>              
               </div>
-          </div>
+          </div> 
+        -->
+
           <!-- Pagination -->
           <div class="card" >
             <div class="card-body d-flex justify-content-center">

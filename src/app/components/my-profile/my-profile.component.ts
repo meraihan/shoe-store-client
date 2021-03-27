@@ -26,6 +26,10 @@ export class MyProfileComponent implements OnInit {
     this.router.navigate(['MyAccount']);
   }
 
+  
+  gotoAdmin(){
+    this.router.navigate(['AdminHome']);
+  }
 
   gotoMyOrders(){
     this.router.navigate(['MyOrders']);
